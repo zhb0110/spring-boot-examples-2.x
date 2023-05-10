@@ -8,6 +8,7 @@ class RestServiceApplicationTests {
 
     @Test
     void contextLoads() {
+        System.out.println("哈哈1");
     }
 
 }

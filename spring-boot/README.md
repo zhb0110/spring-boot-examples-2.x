@@ -1,1 +1,1 @@
-尝试使用 Spring Boot 构建应用程序-包括单元测试，生产级服务，打包，关键是启动器和加载bean
+尝试使用 Spring Boot 构建应用程序-包括单元测试，生产级服务(spring-boot-starter-actuator)，打包，关键是启动器和加载bean
