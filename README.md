@@ -1,12 +1,12 @@
-# SpringBoot实践
+# spring-boot-examples-2.x
 
-* SpringBoot实践，都是简单实现的样例。
-* Java 17 + SpringBoot 3.x + Spring 6.x + Maven.
+* SpringBoot实践，简单样例。
+* Java 11 + SpringBoot 2.7 + Spring 5.x + Maven.
 
 ## Spring Boot 集成
 
-1. spring-boot-commandLineRunner:项目启动时初始化资源案例
-2. **spring-boot-filter-Interceptor**:使用过滤器和拦截器
+1. spring-boot-command-line-runner:项目启动时初始化资源案例
+2. **spring-boot-filter**:使用过滤器和拦截器
 3. **spring-boot-scheduler**:定时任务scheduler示例
 4. spring-boot-thymeleaf:thymeleaf语法、布局使用示例
 5. spring-boot-web-thymeleaf:thymeleaf增删改查示例--
