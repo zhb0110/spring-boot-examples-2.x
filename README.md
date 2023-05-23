@@ -58,15 +58,25 @@
 
 ## Spring Boot 集成 Shiro-shiro本身属于过滤器Filter，高于拦截器Interceptor，官方目前仅适配SpringBooot2.X
 
-1. **spring-boot-shiro**:shiro 基础使用,shiro目前没有适配3.x，采用springboot2.x，仅演示
-2. **spring-boot-shiro-authentication**:shiro用户认证
-2. **spring-boot-shiro-rememberme**:shiro Remember Me记住我
-3. **spring-boot-shiro-authorization**:shiro 权限控制
-4. spring-boot-shiro-redis:shiro+redis
-5. spring-boot-shiro-ehcache:shiro+ehcache
-6. spring-boot-shiro-thymeleaf-tag:thymeleaf中使用shiro标签
-7. spring-boot-shiro-session:shiro+session在线会话管理
-2. **spring-boot-shiro-jwt**:shiro整合JWT
+1. **spring-boot-shiro**:shiro 基础使用,shiro目前没有适配3.x，采用springboot2.x ✓
+2. **spring-boot-shiro-authentication**:shiro用户认证 ✓
+3. spring-boot-shiro-rememberme:shiro Remember Me记住我
+4. spring-boot-shiro-authorization:shiro 权限控制
+5. spring-boot-shiro-redis:shiro+redis
+6. spring-boot-shiro-ehcache:shiro+ehcache
+7. spring-boot-shiro-thymeleaf-tag:thymeleaf中使用shiro标签
+8. spring-boot-shiro-session:shiro+session在线会话管理
+9. spring-boot-shiro-jwt:shiro整合JWT 
+
+## Spring Boot 集成 jwt
+
+1. **spring-boot-jwt**:整合JWT示例 ✓
+
+## Spring Boot 集成 Security
+
+1. spring-security 基础
+2. spring-security-oauth2 基础
+3. spring-security-oauth2单点登录
 
 ## Spring Boot 集成 Docker
 
