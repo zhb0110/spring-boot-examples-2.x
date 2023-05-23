@@ -21,6 +21,7 @@ public class LoginController {
         return "login";
     }
 
+    // TODO:登录不推荐这种方式
     @PostMapping("/login")
     @ResponseBody
     public ResponseBo login(String username, String password) {
