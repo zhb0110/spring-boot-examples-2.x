@@ -1,7 +1,7 @@
 # spring-boot-examples-2.x
 
 * SpringBoot实践，简单样例。
-* Java 11 + SpringBoot 2.7 + Spring 5.x + Maven.
+* Java 8/11 + SpringBoot 2.7 + Spring 5.x + Maven.
 
 ## Spring Boot 集成
 
