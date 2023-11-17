@@ -29,7 +29,7 @@ public class JavaTestApplication {
 
         System.out.println("Hello, World");
 
-        LocalDateTime now = LocalDateTime.of(2023, 11, 1, 0, 0, 0);
+        LocalDateTime now = LocalDateTime.of(2023, 11, 14, 16, 0, 0);
         System.out.println("计算两个时间的差：");
         LocalDateTime end = LocalDateTime.now();
         Duration duration = Duration.between(now, end);
@@ -43,7 +43,8 @@ public class JavaTestApplication {
         System.out.println(now);
         System.out.println(end);
 
-        System.out.println("发送短信耗时【 " + days + "天，" + hours + " 小时，" + minutes + " 分钟，" + seconds + " 秒，" + millis + " 毫秒，" + nanos + " 纳秒】");
+//        System.out.println("发送短信耗时【 " + days + "天，" + Math.round(minutes/60*100)/100 + " 小时，" + minutes + " 分钟，" + seconds + " 秒，" + millis + " 毫秒，" + nanos + " 纳秒】");
+        System.out.println(Math.round(minutes/60f*100)/100);
 
 
     }
