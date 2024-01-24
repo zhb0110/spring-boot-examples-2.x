@@ -35,6 +35,17 @@ class EmsInitRedisApplication {
         stringRedisTemplate.opsForHash().putAll("ZHGY_CH0_EM", map);
     }
 
+    /**
+     * 创建储能柜：在线
+     */
+    @Test
+    public void create3_1() {
+        // HASH
+        HashMap<String, String> map = new HashMap<>();
+        map.put("COMMUNICATION_STATUS", "1");
+        stringRedisTemplate.opsForHash().putAll("CD__ZHGY_CH8", map);
+    }
+
 
     /**
      * 创建储能柜：串口redis
@@ -57,12 +68,25 @@ class EmsInitRedisApplication {
     public void create4() {
         // HASH
         HashMap<String, String> map = new HashMap<>();
-        map.put("SystemFullyChargedStatus", "0");
-        map.put("SystemTotallyDischargedStatus", "0");
+        map.put("SystemFullyChargedStatus", "0"); // 满充
+        map.put("SystemTotallyDischargedStatus", "0"); // 满放
         map.put("ActivePowerSetting", "0");
         map.put("SplitPhaseControlA", "0");
         map.put("SplitPhaseControlB", "0");
         map.put("SplitPhaseControlC", "0");
+
+        // 是否故障：0不故障，1故障
+        map.put("SystemFaultStatus", "0");
+        // 是否告警：0不告警，1告警
+        map.put("SystemAlarmStatus", "0");
+        // 230A:控制模式：本地0，远程2
+        map.put("ControlMode", "0");
+//        map.put("ControlModeYC", "0");
+//        // 230A+:控制模式：本地0，远程1
+//        map.put("ControlMode", "0");
+
+        // 启动状态
+        map.put("SystemOnOffStatus", "1");
 
         stringRedisTemplate.opsForHash().putAll("ZHGY_CH8_PCS", map);
     }
@@ -83,7 +107,7 @@ class EmsInitRedisApplication {
 //        for (int i = 0; i < 144; i++) {
 //            map.put("T" + (i + 1), "1");
 //        }
-        stringRedisTemplate.opsForHash().putAll("ZHGY_CH3_BCMU", map);
+        stringRedisTemplate.opsForHash().putAll("ZHGY_CH8_BCMU", map);
     }
 
 }
