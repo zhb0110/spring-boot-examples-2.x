@@ -50,6 +50,8 @@ public class JavaTestApplication {
         System.out.println(Math.round(minutes / 60f * 100) / 100);
 
         testMap();
+
+        test1();
     }
 
     public static void testMap() {
@@ -87,6 +89,13 @@ public class JavaTestApplication {
         }
         System.out.println("XX:" + chargeDischargeStrategyTemplateId);
 
+
+    }
+
+    public static void test1() {
+        String monitorChannelSn = "YXKX_YXKX1";
+        monitorChannelSn = monitorChannelSn.contains("YXKX_YXKX") ? monitorChannelSn.substring(5) : monitorChannelSn;
+        System.out.println(monitorChannelSn);
 
     }
 
