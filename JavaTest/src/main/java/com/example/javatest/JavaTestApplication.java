@@ -5,6 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 @SpringBootApplication
 public class JavaTestApplication {
@@ -44,7 +47,45 @@ public class JavaTestApplication {
         System.out.println(end);
 
 //        System.out.println("发送短信耗时【 " + days + "天，" + Math.round(minutes/60*100)/100 + " 小时，" + minutes + " 分钟，" + seconds + " 秒，" + millis + " 毫秒，" + nanos + " 纳秒】");
-        System.out.println(Math.round(minutes/60f*100)/100);
+        System.out.println(Math.round(minutes / 60f * 100) / 100);
+
+        testMap();
+    }
+
+    public static void testMap() {
+        ConcurrentHashMap<Integer, List<String>> STRATEGY_TEMPLATE_CABINET = new ConcurrentHashMap<>();
+        List<String> cc = STRATEGY_TEMPLATE_CABINET.get("aaa");
+        if (cc != null) {
+            System.out.println("哈哈");
+        } else {
+            System.out.println("呃呃");
+        }
+
+        List<String> aa = new ArrayList<>();
+        aa.add("230A 2023 76303");
+        aa.add("230A 2023 76305");
+        STRATEGY_TEMPLATE_CABINET.put(17, aa);
+
+        List<String> bb = new ArrayList<>();
+        bb.add("230A 2023 76295");
+        bb.add("230A 2023 76292");
+        STRATEGY_TEMPLATE_CABINET.put(18, bb);
+
+        List<String> dd = new ArrayList<>();
+        dd.add("230A 2023 76284");
+        STRATEGY_TEMPLATE_CABINET.put(19, dd);
+
+
+        String energyStorageCabinetSn = "230A 2023 76295";
+        Integer chargeDischargeStrategyTemplateId = 0;
+        for (Integer tempChargeDischargeStrategyTemplateId : STRATEGY_TEMPLATE_CABINET.keySet()) {
+            List<String> energyStorageCabinetSnList = STRATEGY_TEMPLATE_CABINET.get(tempChargeDischargeStrategyTemplateId);
+            if (energyStorageCabinetSnList.stream().anyMatch(e -> e.equals(energyStorageCabinetSn))) {
+                chargeDischargeStrategyTemplateId = tempChargeDischargeStrategyTemplateId;
+                break;
+            }
+        }
+        System.out.println("XX:" + chargeDischargeStrategyTemplateId);
 
 
     }
