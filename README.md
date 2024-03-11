@@ -3,6 +3,13 @@
 * SpringBoot实践，简单样例。
 * Java 8/11 + SpringBoot 2.7 + Spring 5.x + Maven.
 
+## 工具项目（常用）
+1. spring-boot-easycode:idea插件，一键初始化entity,dao,service,controller
+2. xxl-job-admin/xxl-job-executor-samples:xxljob控制器和执行器项目，主要是admin项目，启动后防止执行器项目一直报错
+3. JavaTest:一些语法测试
+4. springRedis:基础Redis。加了Spring Data Redis和Lombok，配置了application.yml，就做了测试@Test，并且给一些其他项目做测试
+5. spring-boot-hutool：hutool工具项目
+
 ## Spring Boot 集成
 
 1. spring-boot-command-line-runner:项目启动时初始化资源案例
@@ -28,6 +35,7 @@
 21. spring-boot-feign:feign声明式服务调用--
 22. spring-boot-security:启用spring security，并配置--可用shiro替代
 23. spring-boot-webflux:
+24. 
 
 ## Spring Boot 集成 消息中间件
 
@@ -111,20 +119,19 @@
 4. accessing-data-jpa:JPA+H2。使用JPA访问数据，简单实体(@Entity,@Id/@GeneratedValue(strategy=GenerationType.AUTO))
    ，简单查询类(CrudRepository)，应用程序类(@Bean，CommandLineRunner，org.slf4j.LoggerFactory)
    ，启动时启动器-加载bean，直接在命令行执行并日志输出H2库中的操作数据
-5. springRedis:基础Redis。加了Spring Data Redis和Lombok，配置了application.yml，就做了测试@Test
-6. springDataReactiveRedis:使用 Redis 以反应方式访问数据。应用程序使用 Spring Data Redis 和 Project Reactor 与 Redis
+5. springDataReactiveRedis:使用 Redis 以反应方式访问数据。应用程序使用 Spring Data Redis 和 Project Reactor 与 Redis
    数据存储进行交互，在不阻塞的情况下存储和检索对象。Spring Reactive Web，Spring Data Reactive
    Redis和Lombok。注意如果改动了redis密码，需要在application中加redis的密码
-7. messaging-redis:使用 Redis 发送消息。使用 Spring Data Redis 发布和订阅使用 Redis 发送的消息的过程，比较奇葩的需求
-8. securing-web:使用受 Spring security保护的资源创建简单 Web 应用程序的过程。构建一个Spring
+6. messaging-redis:使用 Redis 发送消息。使用 Spring Data Redis 发布和订阅使用 Redis 发送的消息的过程，比较奇葩的需求
+7. securing-web:使用受 Spring security保护的资源创建简单 Web 应用程序的过程。构建一个Spring
    MVC应用程序，该应用程序使用由固定用户列表支持的登录表单来保护页面。“依赖项”：“Spring
    Web”和“Thymeleaf”，实用型比较强，加入了spring-boot-starter-security和spring-security-test，注意模板引擎的模板文件(
    类似JSP)都是放在resources/templates下
-9. accessing-data-mysql:JPA+Mysql。'@Controller,@Repository(Dao)，@Entity，挺实用的，三种依赖Spring Web，Spring Data
+8. accessing-data-mysql:JPA+Mysql。'@Controller,@Repository(Dao)，@Entity，挺实用的，三种依赖Spring Web，Spring Data
    JPA和MySQL驱动程序。spring.jpa.hibernate.ddl-auto生产环境为none，开发环境为update，数据库为：db_example
-10. mybatis-sample:Mybatis+H2。'不需要@Entity，@Repository(Dao)->@Mapper，需要@Controller，实用，两种依赖MyBatis Framework，H2
+9. mybatis-sample:Mybatis+H2。'不需要@Entity，@Repository(Dao)->@Mapper，需要@Controller，实用，两种依赖MyBatis Framework，H2
     Database；演示springboot启动项目执行sql逻辑，schema.sql/data.sql；@Test执行：测试执行能看到执行的文件不一样，其他都和正常启动差不多
-11. mybatis-mysql:Mybatis+Mysql。'不需要@Entity，@Repository(Dao)->@Mapper，需要@Controller，实用，两种依赖MyBatis
+10. mybatis-mysql:Mybatis+Mysql。'不需要@Entity，@Repository(Dao)->@Mapper，需要@Controller，实用，两种依赖MyBatis
     Framework，Mysql驱动；演示springboot启动项目执行sql逻辑，schema.sql/data.sql；@Test执行：测试执行能看到执行的文件不一样，其他都和正常启动差不多；难点在mysql不是内存数据库，无法默认初始化执行sql，springboot2.7+版本需配置spring.sql.init.mode=always
 
 
