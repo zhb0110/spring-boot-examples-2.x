@@ -75,7 +75,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>com.example.easyexceltest2.EasyexcelTest2Application</mainClass>
+                    <mainClass>com.example.easyexceltest2.SpringBootEasyexcelApplication</mainClass>
                     <skip>true</skip>
                 </configuration>
                 <executions>
