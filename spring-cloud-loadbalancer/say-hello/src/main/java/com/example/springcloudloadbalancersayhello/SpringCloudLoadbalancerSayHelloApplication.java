@@ -18,7 +18,7 @@ import java.util.Random;
 @SpringBootApplication
 public class SpringCloudLoadbalancerSayHelloApplication {
 
-    private static Logger log = LoggerFactory.getLogger(SayHelloApplication.class);
+    private static Logger log = LoggerFactory.getLogger(SpringCloudLoadbalancerSayHelloApplication.class);
 
     public static void main(String[] args) {
         SpringApplication.run(SpringCloudLoadbalancerSayHelloApplication.class, args);

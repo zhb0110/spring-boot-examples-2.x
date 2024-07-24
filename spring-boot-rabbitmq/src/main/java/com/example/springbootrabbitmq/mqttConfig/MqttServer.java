@@ -38,7 +38,7 @@ import java.util.Objects;
 @Configuration
 public class MqttServer {
 
-    @Autowired
+    @Resource
     private RabbitProduct rabbitProduct;
 
     /**
@@ -54,7 +54,7 @@ public class MqttServer {
     /**
      * mqtt配置
      */
-    @Autowired
+    @Resource
     private MqttConfig mqttConfig;
 
 
