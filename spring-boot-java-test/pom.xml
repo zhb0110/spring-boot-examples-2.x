@@ -11,8 +11,8 @@
     <groupId>com.example</groupId>
     <artifactId>spring-boot-java-test</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>JavaTest</name>
-    <description>JavaTest</description>
+    <name>spring-boot-java-test</name>
+    <description>spring-boot-java-test</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
