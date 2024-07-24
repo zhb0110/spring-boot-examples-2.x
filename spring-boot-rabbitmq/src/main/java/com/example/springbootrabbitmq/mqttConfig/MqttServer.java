@@ -1,7 +1,7 @@
 package com.example.springbootrabbitmq.mqttConfig;
 
 import com.alibaba.fastjson.JSONObject;
-import com.example.iotx.config.RabbitProduct;
+import com.example.springbootrabbitmq.rabbit.topic.TopicSender;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,8 +38,11 @@ import java.util.Objects;
 @Configuration
 public class MqttServer {
 
-    @Resource
-    private RabbitProduct rabbitProduct;
+//    @Resource
+//    private RabbitProduct rabbitProduct;
+
+    @Autowired
+    private TopicSender sender;
 
     /**
      * 出站通道
@@ -190,7 +193,9 @@ public class MqttServer {
 //                            String s_utf81 = new String(message.getPayload(), "UTF-8");
 //                            String s_utf8 = new String((byte[]) message.getPayload(), "UTF-8");
 //                            JSONObject payload = (JSONObject) message.getPayload();
-                        rabbitProduct.sendDeviceMSG(payload);
+//                        rabbitProduct.sendDeviceMSG(payload);
+
+                        sender.sendDeviceMSG(payload);
 
                         log.info("接收到该主题消息为: {}", payload);
 //                        } catch (UnsupportedEncodingException e) {

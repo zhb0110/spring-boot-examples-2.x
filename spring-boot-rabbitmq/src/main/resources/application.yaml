@@ -1,0 +1,17 @@
+mqtt:
+  config:
+    username: admin
+    password: 123456
+    #MQTT-服务器连接地址，如果有多个，用逗号隔开，如：tcp://xxx.xxx.xx.xxx:1883,tcp://xxx.xxx.xxx.xxx:1883
+    hostUrl: tcp://127.0.0.1:1883
+    #两个客户端的clientId不能相同，生产者和消费者的clientId不能相同
+    #    pubClientId: pub-client-id-al68pq1w-dev
+    #    subClientId: sub-client-id-9v83pp7c-dev
+    clientId: ${random.value}
+    #发布的主题--MQTT-默认的消息推送主题，实际可在调用接口时指定
+    #    pubTopic: pubTopic
+    pubTopic: pubTopic
+    #订阅的主题
+    #    subTopic: subTopic,oil-topic,broadcast-topic,fault-topic
+    subTopic: subTopic,topic/devices/upload,topic/devices/rpc/reply/+
+    completionTimeout: 3000

@@ -21,13 +21,13 @@ public class TopicRabbitConfigVague {
     // 新建队列，名字为 topic.messages，默认情况下，如果不手动绑定bind，则直接用该名字就可以做路由键
     // TODO:但是接收端必须和队列名相同！！
     @Bean
-    public Queue queueMessages() {
+    public Queue queueMessages2() {
         return new Queue(TopicRabbitConfigVague.messages);
     }
 
     // 定义 交换机
     @Bean
-    TopicExchange exchange() {
+    TopicExchange exchange2() {
         return new TopicExchange("topicExchange");
     }
 
@@ -45,7 +45,7 @@ public class TopicRabbitConfigVague {
     // TODO:交换机绑定(改造)队列和路由关键字：队列queueMessages，路由关键字/2001/*/up
     // 定义 绑定 队列2 交换机 路由关键字xx
     @Bean
-    Binding bindingExchangeMessages(Queue queueMessages, TopicExchange exchange) {
+    Binding bindingExchangeMessages2(Queue queueMessages, TopicExchange exchange) {
         return BindingBuilder.bind(queueMessages).to(exchange).with("/2001/*/up");
     }
 
