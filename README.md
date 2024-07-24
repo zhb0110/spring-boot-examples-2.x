@@ -53,8 +53,8 @@
 
 ## Spring Boot 集成 数据中间件
 
-1. **spring-boot-mybatis**:mybatis注解、xml使用、增删改查、多数据源使用示例
-2. **spring-boot-jpa**:jpa操作，增删改查多数据源使用示例
+1. **spring-boot-mybatis**:mybatis注解、xml使用、增删改查、多数据源使用示例---+事务
+2. **spring-boot-jpa**:jpa操作，增删改查多数据源使用示例---+事务
 3. spring-boot-mapper-pagehelper:整合mybatis通用mapper和pagehelper--
 4. spring-boot-elasticsearch:全文检索引擎
 5. spring-boot-jdbctemplate:
