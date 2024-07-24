@@ -5,8 +5,8 @@
     <groupId>com.example</groupId>
     <artifactId>spring-boot-easyexcel</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>easyexcel-test2</name>
-    <description>easyexcel-test2</description>
+    <name>spring-boot-easyexcel</name>
+    <description>spring-boot-easyexcel</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
